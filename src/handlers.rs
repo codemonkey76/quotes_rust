@@ -1,8 +1,8 @@
 use axum::{extract, http};
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use sqlx::PgPool;
 
-#[derive(Debug, Deserialize)]
+#[derive(Serialize)]
 pub struct Quote {
     id: uuid::Uuid,
     book: String,
